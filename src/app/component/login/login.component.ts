@@ -23,19 +23,21 @@ private loginSub: Subscription | undefined;
    ) { }
 
   loginForm= this.fb.group({
-    email:['',[Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
+    //email:['',[Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
 
-    // phone:['',[Validators.required,Validators.pattern("^((\\+91-?)|0)?[0-9]{11}$")]],
-    // pass:['',[Validators.required,Validators.pattern('^[a-zA-Z\s]+$')]], 
+    phone: [
+      '',
+      [Validators.required, Validators.pattern('^((\\+91-?)|0)?[0-9]{10}$')],
+    ],    // pass:['',[Validators.required,Validators.pattern('^[a-zA-Z\s]+$')]],
     pass:['',[Validators.required]],
 
   })
-  // get phone(){
-  //   return this.loginForm.get('phone')
-  // }
-  get email(){
-    return this.loginForm.get('email')
+  get phone(){
+    return this.loginForm.get('phone')
   }
+  // get email(){
+  //   return this.loginForm.get('email')
+  // }
   get pass(){
     return this.loginForm.get('pass')
   }
@@ -53,7 +55,7 @@ private loginSub: Subscription | undefined;
 
     this.loginSub = this.auth.login(
       // credentials.phone,
-      credentials.email,
+      `email-${credentials.phone}@email.com`,
       credentials.pass
     ).subscribe(
       resp => {
@@ -72,8 +74,8 @@ private loginSub: Subscription | undefined;
       },
       () => {
         this.toast.error({detail:"خطأ في تسجيل الدخول", summary:"البريد الالكنروني او الرقم السري خاطئ", duration:5000});
-       
-        
+
+
       }
     );
   }

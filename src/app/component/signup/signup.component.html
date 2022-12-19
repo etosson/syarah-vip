@@ -6,13 +6,13 @@
             <div class="row g-0">
               <div class="col-lg-6">
                 <div class="card-body p-md-5 mx-md-4">
-  
+
                   <div class="text-center">
                     <img src="../../../assets/images/logoen.png"
                       style="width: 185px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">{{"create" | translate}}</h4>
                   </div>
-  
+
                   <form  [formGroup]="personalInfoForm" ngNativeValidate (ngSubmit)="signup()">
 
                     <div class="form-outline mb-4">
@@ -23,10 +23,10 @@
                         <small class="error" *ngIf="name?.errors?.['required']">الاسم مطلوب</small>
                     </div>
                     </div>
-                  
-    
-                    
-                 
+
+
+
+
                     <div class="form-outline mb-4">
                       <!-- <label class="form-label" for="form2Example11">phone</label> -->
                       <input type="text" required formControlName="phone" [class.notvalid]="phone?.invalid &&phone?.touched" name="phone" placeholder="{{'phone' | translate}}" />
@@ -36,13 +36,12 @@
                       </div>
                     </div>
 
-                    <div class="form-outline mb-4">
-                      <!-- <label class="form-label" for="form2Example11">Email</label> -->
+                    <!-- <div class="form-outline mb-4">
                       <input type="text" formControlName="email" [class.notvalid]="email?.invalid &&email?.touched"  name="email" placeholder="{{'email' | translate}}" />
                       <div *ngIf="email?.invalid && email?.touched" >
                           <small class="error" *ngIf="email?.errors?.['pattern']">البريد الالكتروني غير صالح.</small>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="form-outline mb-4">
                       <!-- <label class="form-label" for="form2Example11">password</label> -->
@@ -60,17 +59,17 @@
                            <small class="error" *ngIf="confirmPass?.errors?.['required']">تاكيد الرقم السري مطلوب.</small>
                        </div>
                     </div>
-                    
-                  
-                   
-                  
-                    <input type="submit"  class="sub" [disabled]="!personalInfoForm.valid"  value="{{'Submit' | translate}}">
-                    
+
+
+
+
+                    <input type="submit"  class="sub" [disabled]="!personalInfoForm.valid"  value="{{'Register' | translate}}">
+
                 </form>
                 <div class="d-flex align-items-center justify-content-center pb-4 ">
                   <p class="mb-0 me-2 text-muted">{{'already' | translate}}</p>
                   <a class="fs-5 text-warning m-0" routerLink="/login">{{'login' | translate}}</a>
-                </div>  
+                </div>
                 </div>
               </div>
               <div class="col-lg-6 d-flex align-items-center gradient-custom-2 ps-2 ">
