@@ -33,7 +33,7 @@ export class ProductComponent implements OnInit {
     // maxPrice:10000000,
     // state:"   ",
   }
-  makers:any[]=["Mercedes-Benz","Lamborghini","Bentley","Porsche","bmw","dodg","Rolls Royce"]
+  makers:any[]=["Mercedes-Benz","لامبورغيني","بنتلي","بورش","بي إم دبليو","دودج","رولز رويس"]
   models:any[]=[]
   years:number[]=[]
   locations:string[]=[] 
@@ -41,17 +41,14 @@ export class ProductComponent implements OnInit {
 
 
   logo:logos[]=[
-    {name:"bentley",path:"../../../assets/images/logo/bentley-logo.png"},
-    {name:"mercedes",path:"../../../assets/images/logo/mercedes-.png"},
-    {name:"bmw",path:"../../../assets/images/logo/bmw-brand-logo-0.png"},
-    {name:"dodg",path: "../../../assets/images/logo/Dodge-logo-91321131BF-seeklogo.com.png"  },
-    {name:"hummer",path:"../../../assets/images/logo/hummer-.png"},
-    {name:"Cadillac",path:"../../../assets/images/logo/Cadillac-.png"},
-    {name:"lamborghin",path:  "../../../assets/images/logo/lamborghin.png"},
-    {name:"ferrari",path:"../../../assets/images/logo/ferrari-logo-png.png" },
-    {name:"porsche",path:"../../../assets/images/logo/porsche-logo-2100x1100.png"},
-    {name:"Volkswagen",path:"../../../assets/images/logo/Volkswagen.png"},
-    {name:"Jeep",path:"../../../assets/images/logo/Jeep_logo.svg.png"},
+    {name:"بنتلي",path:"../../../assets/images/logo/bentley-logo.png"},
+    {name:"مرسيدس ",path:"../../../assets/images/logo/mercedes-.png"},
+    {name:"بي إم دبليو",path:"../../../assets/images/logo/bmw-brand-logo-0.png"},
+    {name:"دودج",path: "../../../assets/images/logo/Dodge-logo-91321131BF-seeklogo.com.png"  },
+    {name:"لامبورغيني",path:  "../../../assets/images/logo/lamborghin.png"},
+    {name:"بورش",path:"../../../assets/images/logo/porsche-logo-2100x1100.png"},
+    {name:"رولز رويس",path:"../../../assets/images/logo/Rolls-Royce.png"},
+ 
     ]
 
   constructor(private activatedRouter:ActivatedRoute,
@@ -65,19 +62,6 @@ export class ProductComponent implements OnInit {
     
     }
   
-    // filterByType (searchType:string,crit:any){
-    
-    //   switch (searchType) {
-    //     case "All":
-    //           this.getcars()
-    //       break;
-    //   case "byName":
-    //     this.filter(crit)
-    //   break
-    //     default:
-    //       break;
-    //   }
-    // }
     getcars(){
       this.SpinnerService.show(); 
 

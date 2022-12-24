@@ -25,6 +25,8 @@ export interface Car{
     color:string,
     fuel:string,
     price:number, 
+    trendingAdd:boolean,
+
 }
 
 export interface CarIDResponse{
@@ -53,6 +55,7 @@ export interface CarIDResponse{
         color:string,
         fuel:string,
         price:number,
+        trendingAdd:boolean,
 
 
     }

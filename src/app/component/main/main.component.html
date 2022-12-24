@@ -10,26 +10,18 @@
         </div>
       </div>
     </div>
-    <div class="row row-cols-1 row-cols-lg-3 row-cols-sm-2 g-2 g-lg-3">
-      <!-- product 01 -->
-      <!-- try -->
-      <div *ngFor="let car of cars" class="col">
-        <div>
-          <div class="col">
+
+
+    <div class="row"  >
+        <div class="col-4 "  *ngFor="let car of fakeCars">
+           <!-- product 01 -->
             <!-- product card -->
             <div class="product-item bg-light">
-              <div class="card">
+              <div class="card"  >
                 <div class="thumb-content">
                   <div class="price">{{ car.price }} ريال</div>
-                  <button class="fav btn btn-dark bi bi-heart-fill"></button>
                   <a (click)="toCar(car)">
-                    <img
-                      class="card-img-top"
-                      src="{{ car.img1 }}"
-                      alt="Card image cap"
-                      height="400"
-                      style="object-fit: cover"
-                    />
+                    <img class="card-img-top" src="{{ car.img1 }}"alt="Card image cap" height="400" style="object-fit: cover"/>
                   </a>
                 </div>
                 <div class="card-body">
@@ -49,16 +41,24 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
+     
+          </div>
       </div>
 
+   
+
       <!-- end try -->
-    </div>
-  </div>
+
+
+
   <div class="justify-content-md-center text-center">
-    <li class="list-inline-item">
+    <li class="list-inline-item ms-2">
       <a class="btn btn-main" routerLink="/product">{{ "more" | translate }}</a>
+    </li>
+    <li class="list-inline-item">
+      <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main" target="_blank"> {{ "contactUs" | translate }}
+      </a>
     </li>
   </div>
 </section>
@@ -73,7 +73,7 @@
             <!-- Coupon description -->
             <h2 class="text-info">{{ "sellYourCar" | translate }}</h2>
             <!-- Submii button -->
-            <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-transparent-white" target="blank">
+            <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main" target="blank">
                 {{ "contactUs" | translate }}
             </a>
           </div>
@@ -83,3 +83,8 @@
   </div>
   <!-- Container End -->
 </section>
+ <ngx-spinner>
+<span>
+    <img src="../../../assets/images/loader.gif" alt="">
+</span>
+</ngx-spinner>
