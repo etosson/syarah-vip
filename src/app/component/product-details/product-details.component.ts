@@ -43,6 +43,7 @@ export class ProductDetailsComponent implements OnInit {
   content:"",
   date:""
   }
+  myDate: Date=new Date();
 
 
   constructor(private activatedRouter:ActivatedRoute,
@@ -91,8 +92,6 @@ export class ProductDetailsComponent implements OnInit {
 }
 
 onsubmit(){
-  let myDate = new Date();
-  myDate: this.datePipe.transform(myDate, 'yyyy-MM-dd')?.toString()
   let currentUserID= this.ss.getItem('userId')
 
    this.newComment = {
@@ -100,7 +99,7 @@ onsubmit(){
       userID: currentUserID?.toString(),
       carID: this.carID,
       content: this.newComment.content,
-      date:myDate.toString()
+      date:this.myDate.toLocaleString()
   };
   this.addComment(this.newComment)
   
