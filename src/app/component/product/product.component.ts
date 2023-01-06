@@ -25,15 +25,15 @@ export class ProductComponent implements OnInit {
   cars:Car[]=[]
 
   searchValue:SearchValueResponse={
-    maker:" ",
-    location:" ",
-    model:" ",
+    maker:"",
+    location:"",
+    model:"",
     year: 0,
     // minPrice:0,
     // maxPrice:10000000,
     // state:"   ",
   }
-  makers:any[]=["Mercedes-Benz","لامبورغيني","بنتلي","بورش","بي إم دبليو","دودج","رولز رويس"]
+  makers:any[]=["مرسيدس","لامبورغيني","بنتلي","بورش","بي إم دبليو","دودج","رولز رويس"]
   models:any[]=[]
   years:number[]=[]
   locations:string[]=[] 
@@ -90,14 +90,14 @@ export class ProductComponent implements OnInit {
     for (const car of this.cars) {
       if (this.searchValue.maker==car.maker) {
 
-        if (this.models.includes(car.model) ===false){
+        if (this.models.includes(car.model) ==false){
           this.models.push(car.model)
           
         }
-        if (this.locations.includes(car.location) ===false){
+        if (this.locations.includes(car.location) ==false){
           this.locations.push(car.location)
         }
-        if (this.years.includes(car.year) ===false){
+        if (this.years.includes(car.year) ==false){
           this.years.push(car.year)
         }}}
       }

@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import {TranslationModule} from '../translation.module';
 import { SortPipe } from './pipes/sort.pipe';
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 
 
 
@@ -25,6 +26,8 @@ import { SortPipe } from './pipes/sort.pipe';
     AppRoutingModule,
     CommonModule,
     TranslationModule,
+    ShareButtonsModule
+    
 
   ],
 
@@ -32,7 +35,9 @@ import { SortPipe } from './pipes/sort.pipe';
     CommonModule,
     RatingComponent,
     SearchComponent,
-    SortPipe
+    SortPipe,
+    ShareButtonsModule
+    
   ],
   providers:    [ SortPipe ],
 })

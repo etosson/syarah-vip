@@ -11,7 +11,7 @@
 <!--===================================
 =            Store Section            =
 ====================================-->
-<section class="section bg-gray">
+<section class="section product-details ">
     <!-- Container Start -->
     <div class="container">
         <div class="row">
@@ -134,7 +134,7 @@
                     <div class="widget coupon text-center">
                         <p>هل لديك سيارة لعرضها ؟</p>
                         <!-- Submii button -->
-                        <a href="single.html" class="btn btn-transparent-white">{{ "Submit" | translate }}
+                        <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-transparent-white">{{ "Submit" | translate }}
             </a>
                     </div>
                 </div>
@@ -149,19 +149,23 @@
                     </div>
                 </div>
                 <div class="actions_wrapper not_author">
-                    <button class="btn-borderless action_btn bi bi-envelope">
+                    <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn-borderless action_btn bi bi-envelope">
             <span>مراسلة</span>
-          </button>
-                    <button class="btn-borderless action_btn bi bi-heart-fill">
-            <span style="margin-left: 5px"></span><span>تفضيل</span>
-          </button>
-                    <button class="btn-borderless action_btn bi bi-share-fill" id="share_btn">
-            <span>مشاركة</span>
-          </button>
-                    <button class="btn-borderless action_btn bi bi-flag-fill">
+          </a>
+                 
+       
+                    <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20الابلاغ%20عن%20سيارة%20الموقع%20" class="btn-borderless action_btn bi bi-flag-fill">
             <span>بلاغ</span>
-          </button>
-                </div>
+          </a>
+                </div> 
+                <share-buttons theme="modern-dark"  
+                        [include]="['copy', 'facebook', 'messenger','twitter', 'whatsapp']"
+                        [showIcon]="false"
+                        [showText]="true"
+                        url={{url}}
+                        description=" سيارة vip "
+                        class="pt-5">
+                    </share-buttons>
 
                 <!-- ********************comments************************  -->
                 <div class="comment_list_wrapper">

@@ -79,7 +79,8 @@ button:hover {
    .actions_wrapper .action_btn .options_btns>:first-child {
     margin-left:5px
    }
-  .actions_wrapper button {
+  .actions_wrapper button,
+    .actions_wrapper a {
     height:auto
    }
    .actions_wrapper #share_btn button {
@@ -294,4 +295,9 @@ button:hover {
  }
  .postWrapper .postMain .add_comment_wrapper .btn_msg_wrapper .blue_btn {
   padding:10px 30px
+ }
+
+ .product-details{
+  margin:1rem 1rem 0 1rem;
+
  }

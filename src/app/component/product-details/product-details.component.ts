@@ -34,6 +34,7 @@ export class ProductDetailsComponent implements OnInit {
   authStatus!: Subscription;
   userId='';
   users: UserResponse=[]
+  url:string="http://161.35.17.239/home/"
   currentUserID= this.ss.getItem('userId')
 
   newComment:PostCommentPayload={
@@ -53,9 +54,12 @@ export class ProductDetailsComponent implements OnInit {
     private commentService:CommentsService,
     private ss:StorageService,
      private SpinnerService: NgxSpinnerService,
-    private datePipe: DatePipe) { }
+    private datePipe: DatePipe,
+    private router: Router) { }
 
   ngOnInit(): void {
+    
+    this.geturl()
 
 
      // get comments--------------***************
@@ -138,9 +142,12 @@ getcomments(){
       this.SpinnerService.hide();
     }, 1000);
 }
+
+geturl(){
+  this.url=window.location.href
 }
 
 
 
 
-
+}
