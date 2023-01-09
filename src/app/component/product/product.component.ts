@@ -44,7 +44,7 @@ export class ProductComponent implements OnInit {
     {name:"بنتلي",path:"../../../assets/images/logo/bentley-logo.png"},
     {name:"مرسيدس ",path:"../../../assets/images/logo/mercedes-.png"},
     {name:"بي إم دبليو",path:"../../../assets/images/logo/bmw-brand-logo-0.png"},
-    {name:"دودج",path: "../../../assets/images/logo/Dodge-logo-91321131BF-seeklogo.com.png"  },
+    // {name:"دودج",path: "../../../assets/images/logo/Dodge-logo-91321131BF-seeklogo.com.png"  },
     {name:"لامبورغيني",path:  "../../../assets/images/logo/lamborghin.png"},
     {name:"بورش",path:"../../../assets/images/logo/porsche-logo-2100x1100.png"},
     {name:"رولز رويس",path:"../../../assets/images/logo/Rolls-Royce.png"},
@@ -74,64 +74,64 @@ export class ProductComponent implements OnInit {
         
     }
     
-    do(){
-      for (const car of this.cars) {
-        if (this.makers.includes(car.maker)==false) {
-          this.makers.push(car.maker)
-        }}
-      }
+//     do(){
+//       for (const car of this.cars) {
+//         if (this.makers.includes(car.maker)==false) {
+//           this.makers.push(car.maker)
+//         }}
+//       }
 
-  selectbrand(selectedbrand:string){
-    this.getcars()
-    this.models=[]
-    this.years=[]
-    this.locations=[]
-    this.searchValue.maker=selectedbrand
-    for (const car of this.cars) {
-      if (this.searchValue.maker==car.maker) {
+//   selectbrand(selectedbrand:string){
+//     this.getcars()
+//     this.models=[]
+//     this.years=[]
+//     this.locations=[]
+//     this.searchValue.maker=selectedbrand
+//     for (const car of this.cars) {
+//       if (this.searchValue.maker==car.maker) {
 
-        if (this.models.includes(car.model) ==false){
-          this.models.push(car.model)
+//         if (this.models.includes(car.model) ==false){
+//           this.models.push(car.model)
           
-        }
-        if (this.locations.includes(car.location) ==false){
-          this.locations.push(car.location)
-        }
-        if (this.years.includes(car.year) ==false){
-          this.years.push(car.year)
-        }}}
-      }
+//         }
+//         if (this.locations.includes(car.location) ==false){
+//           this.locations.push(car.location)
+//         }
+//         if (this.years.includes(car.year) ==false){
+//           this.years.push(car.year)
+//         }}}
+//       }
 
-  selectmodel(model:string,){
-    this.searchValue.model=model
+//   selectmodel(model:string,){
+//     this.searchValue.model=model
 
-  }
-  selectyear(year:any){
-    this.searchValue.year=year
-  }
-  selectlocation(location:string){
-  this.searchValue.location=location
-  }
+//   }
+//   selectyear(year:any){
+//     this.searchValue.year=year
+//   }
+//   selectlocation(location:string){
+//   this.searchValue.location=location
+//   }
 
 toCar(car:Car){
 this.router.navigate(["/product",car.id]);
 }
 
-filterProject(){
-  this.cars= this.filterCars()
+// filterProject(){
+//   this.cars= this.filterCars()
   
-    }
-filterCars(){
-    return this.cars.filter((product) => 
-    { 
-      return(
-        product.maker.toLowerCase().indexOf( this.searchValue.maker?.toLowerCase())!==-1 &&
-        product.model.toLowerCase().indexOf( this.searchValue.model?.toLowerCase())!==-1 &&
-        product.location.toLowerCase().indexOf( this.searchValue.location?.toLowerCase())!==-1 &&
-        product.year.toString().indexOf( this.searchValue.year?.toLowerCase())!==-1 
-        )}
-        )
-       }
+//     }
+// filterCars(){
+//     return this.cars.filter((product) => 
+//     { 
+//       return(
+//         product.maker.toLowerCase().indexOf( this.searchValue.maker?.toLowerCase())!==-1 &&
+//         product.model.toLowerCase().indexOf( this.searchValue.model?.toLowerCase())!==-1 &&
+//         product.location.toLowerCase().indexOf( this.searchValue.location?.toLowerCase())!==-1 &&
+//         product.year.toString().indexOf( this.searchValue.year?.toLowerCase())!==-1 
+//         )}
+//         )
+//        }
 
 
 filter(value:string){

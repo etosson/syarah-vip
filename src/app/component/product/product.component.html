@@ -36,8 +36,11 @@
     <div class="row">
       <div class="col-lg-3 col-md-2">
         <div class="category-sidebar">
+
+
+
                   <!-- search  -->
-        <form class="widget filter" #userForm="ngForm" (ngSubmit)="filterProject()">
+        <!-- <form class="widget filter" #userForm="ngForm" (ngSubmit)="filterProject()">
 
             <h4 class="widget-header">{{ "show" | translate }}</h4>
             <div class="form-group btn-group w-100 my-2">
@@ -48,6 +51,7 @@
                 </option>
             </select>
             </div>
+            
             <div class="form-group btn-group w-100 my-2">
             <select class="form-select bg-dark text-warning" aria-label="Default select example" >
                 <option class="text-warning">
@@ -88,12 +92,12 @@
             <button type="submit" class="btn my-btn w-100 mt-3">
               <span class="bi bi-search"></span>
             </button>
-          </form>
+          </form> -->
 
 
 
           <div class="brand-logos">
-            <a class="brand-logos--svg" *ngFor="let i of logo">
+            <a class="brand-logos--svg" *ngFor="let i of logo" >
                 <img alt="ford-logo" class="svg-size-5x" src="{{ i.path }}" width="60" (click)="filter(i.name)"/></a>
         </div>
 
