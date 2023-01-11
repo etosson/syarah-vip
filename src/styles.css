@@ -3,9 +3,7 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gulzar&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300&display=swap');
 body {
   padding-top: 5.5rem;
   line-height: 1.5;
@@ -21,7 +19,7 @@ p, li, input, select, button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Aref Ruqaa',serif;
+  font-family: 'Noto Kufi Arabic', sans-serif;
   font-weight: 600;
   color: #333;
 }
