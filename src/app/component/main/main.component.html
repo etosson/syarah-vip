@@ -21,7 +21,7 @@
                 <div class="thumb-content">
                   <div class="price">{{ car.price }} ريال</div>
                   <a (click)="toCar(car)">
-                    <img class="card-img-top" src="{{ car.img1 }}"alt="Card image cap" height="400" style="object-fit: cover"/>
+                    <img class="card-img-top" src="{{ car.img1 }}"alt="Card image cap" height="400" />
                   </a>
                 </div>
                 <div class="card-body">
@@ -59,7 +59,7 @@
     <li class="list-inline-item">
       <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main" target="_blank">
  {{ "contactUs" | translate }}
-                       <img src="../../../assets/images/logo/whatsapp.png "  width="25" height="25" alt="">
+                       <img class="whatsIcon" src="../../../assets/images/logo/whatsapp.png "  alt="">
 
       </a>
     </li>
@@ -72,13 +72,18 @@
     <div class="row justify-content-md-center text-center">
       <div class="col-md-8">
         <div class="content-holder">
-          <div class="bg-dark bg-opacity-50">
+          <div class="bg-black bg-opacity-50">
             <!-- Coupon description -->
             <h2 class="text-info">{{ "sellYourCar" | translate }}</h2>
             <!-- Submii button -->
             <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main " target="blank">
                 {{ "contactUs" | translate }}
-                              <img src="../../../assets/images/logo/whatsapp.png "  width="25" height="25" alt="">
+                              <img class="whatsIcon" src="../../../assets/images/logo/whatsapp.png "  alt="">
+
+            </a>
+            <a href="mailto:abc@example.com?subject=صور سيارتي&body=الصور" class="btn btn-main me-2" >
+                ارسل الصور
+                            
 
             </a>
           </div>

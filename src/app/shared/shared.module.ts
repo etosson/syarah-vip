@@ -8,6 +8,8 @@ import { AppRoutingModule } from '../app-routing.module';
 import {TranslationModule} from '../translation.module';
 import { SortPipe } from './pipes/sort.pipe';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
 
 
 
@@ -26,7 +28,8 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
     AppRoutingModule,
     CommonModule,
     TranslationModule,
-    ShareButtonsModule
+    ShareButtonsModule,
+    YouTubePlayerModule
     
 
   ],
@@ -36,7 +39,8 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
     RatingComponent,
     SearchComponent,
     SortPipe,
-    ShareButtonsModule
+    ShareButtonsModule,
+    YouTubePlayerModule
     
   ],
   providers:    [ SortPipe ],

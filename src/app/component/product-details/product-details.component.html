@@ -40,6 +40,15 @@
                         <h3 class="tab-title">{{ "ProductDescription" | translate }}</h3>
                         <p>{{ car.description }}</p>
                     </div>
+
+                     <share-buttons theme="modern-dark"  
+                        [include]="['copy', 'facebook', 'messenger','twitter', 'whatsapp']"
+                        [showIcon]="false"
+                        [showText]="true"
+                        url={{url}}
+                        description=" سيارة vip "
+                        class="pt-5">
+                    </share-buttons>
                         <div class="product-slider-item my-4" data-image="../../../assets/images/products/products-1.jpg">
                             <img class="img-fluid w-100" src="{{ car.img1 }}" alt="product-img" />
                         </div>
@@ -136,7 +145,9 @@
             <div class="content mt-5 pt-5 col-lg-8 col-12">
                 <div class="tab-content" id="pills-tabContent">
                   
-                    <iframe title="Inline Frame Example" width="100%" height="400" src=" https://www.youtube.com/embed/qQg8vxnUFHo" frameborder="0" allowfullscreen></iframe>
+                   
+                    <youtube-player [videoId]="car.videoLink"> </youtube-player>
+                
                 </div>
                 <div class="actions_wrapper not_author">
                     <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn-borderless action_btn bi bi-envelope">

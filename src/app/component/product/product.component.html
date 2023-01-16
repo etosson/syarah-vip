@@ -8,10 +8,10 @@
 
           <div class="form-group btn-group col-7 col-sm-4 ms-5">
             <select
-              class="form-select bg-dark text-warning"
+              class="form-select bg-black text-primary"
               aria-label="Default select example"
             >
-              <option class="text-warning">{{ "sort" | translate }}</option>
+              <option class="text-primary">{{ "sort" | translate }}</option>
               <option value="" (click)="sortAtoZ()">ترتيب من أ الي ى</option>
               <option value="" (click)="sortZtoA()">ترتيب من ى الي أ</option>
             </select>
@@ -44,8 +44,8 @@
 
             <h4 class="widget-header">{{ "show" | translate }}</h4>
             <div class="form-group btn-group w-100 my-2">
-            <select class="form-select bg-dark text-warning" aria-label="Default select example" required>
-                <option selected class="text-warning"> {{ "selectBrand" | translate }} </option>
+            <select class="form-select bg-black text-primary" aria-label="Default select example" required>
+                <option selected class="text-primary"> {{ "selectBrand" | translate }} </option>
                 <option #all value="{{ m }}" *ngFor="let m of makers" (click)="selectbrand(all.value)" (click)="do()">
                 {{ m }}
                 </option>
@@ -53,8 +53,8 @@
             </div>
             
             <div class="form-group btn-group w-100 my-2">
-            <select class="form-select bg-dark text-warning" aria-label="Default select example" >
-                <option class="text-warning">
+            <select class="form-select bg-black text-primary" aria-label="Default select example" >
+                <option class="text-primary">
                 {{ "selectModel" | translate }}
                 </option>
                 <option #allmodel value="" (click)="selectmodel(allmodel.value)" >
@@ -66,8 +66,8 @@
             </select>
             </div>
             <div class="form-group btn-group w-100 my-2">
-              <select class="form-select bg-dark text-warning" aria-label="Default select example">
-                <option class="text-warning">{{ "year" | translate }}</option>
+              <select class="form-select bg-black text-primary" aria-label="Default select example">
+                <option class="text-primary">{{ "year" | translate }}</option>
                 <option #allyear value="" (click)="selectyear(allyear.value)" >
                   الكل
                 </option>
@@ -77,8 +77,8 @@
               </select>
             </div>
             <div class="form-group btn-group w-100 my-2">
-              <select class="form-select bg-dark text-warning" aria-label="Default select example" >
-                <option class="text-warning">
+              <select class="form-select bg-black text-primary" aria-label="Default select example" >
+                <option class="text-primary">
                   {{ "location" | translate }}
                 </option>
                 <option #allloc value="" (click)="selectlocation(allloc.value)" >
@@ -125,7 +125,7 @@
                         src="{{ car.img1 }}"
                         alt="Card image cap"
                         height="400"
-                        style="object-fit: cover"
+                        
                     /></a>
                   </div>
                   <div class="card-body">

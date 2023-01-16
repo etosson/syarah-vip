@@ -59,7 +59,7 @@ export class ToastService {
   showDark(text: string, options: any = {}) {
     this.toasts.push({
       text,
-      classname: 'bg-dark text-light',
+      classname: 'bg-black text-light',
       ...options
     });
   }

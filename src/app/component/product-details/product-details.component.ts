@@ -45,6 +45,7 @@ export class ProductDetailsComponent implements OnInit {
   date:""
   }
   myDate: Date=new Date();
+apiLoaded = false;
 
 
   constructor(private activatedRouter:ActivatedRoute,
@@ -58,6 +59,14 @@ export class ProductDetailsComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
+    if (!this.apiLoaded) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      this.apiLoaded = true;
+    }
+
+
     
     this.geturl()
 
