@@ -11,60 +11,79 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-sm-12 col-lg-6" *ngFor="let car of fakeCars">
+        <!-- product 01 -->
+        <!-- product card -->
+        <div class="product-item bg-light">
+          <div class="card">
+            <div class="thumb-content">
+              <div class="price">{{ car.price }} ريال</div>
+              <a (click)="toCar(car)">
+                <img
+                  class="card-img-top"
+                  src="{{ car.img1 }}"
+                  alt="Card image cap"
+                  height="400"
+                />
+              </a>
+            </div>
+            <div class="card-body">
+              <p style="font-size: small">{{ car.maker }}</p>
 
-    <div class="row"  >
-        <div class=" col-sm-12 col-lg-6 "  *ngFor="let car of fakeCars">
-           <!-- product 01 -->
-            <!-- product card -->
-            <div class="product-item bg-light">
-              <div class="card"  >
-                <div class="thumb-content">
-                  <div class="price">{{ car.price }} ريال</div>
-                  <a (click)="toCar(car)">
-                    <img class="card-img-top" src="{{ car.img1 }}"alt="Card image cap" height="400" />
-                  </a>
-                </div>
-                <div class="card-body">
-                  <p style="font-size: small">{{ car.maker }}</p>
-
-                  <h4 class="card-title">
-                    <a (click)="toCar(car)">{{ car.name }} </a>
-                  </h4>
-                  <div class="row mt-3">
-                    <p class="col-6">
-                      {{ "model" | translate }}: {{ car.year }}
-                    </p>
-                    <p class="col-6">
-                      {{ "Mileage" | translate }} :{{ car.mileage }} كم
-                    </p>
-                  </div>
-                </div>
+              <h4 class="card-title">
+                <a (click)="toCar(car)">{{ car.name }} </a>
+              </h4>
+              <div class="row mt-3">
+                <p class="col-6">{{ "model" | translate }}: {{ car.year }}</p>
+                <p class="col-6">
+                  {{ "Mileage" | translate }} :{{ car.mileage }} كم
+                </p>
               </div>
             </div>
-        </div>
-     
           </div>
+        </div>
       </div>
+    </div>
+  </div>
 
-   
-
-      <!-- end try -->
-
-
+  <!-- end try -->
 
   <div class="justify-content-md-center text-center">
     <li class="list-inline-item ms-2">
       <a class="btn btn-main" routerLink="/product">{{ "more" | translate }}</a>
     </li>
-    <li class="list-inline-item">
+    <!-- <li class="list-inline-item">
       <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main" target="_blank">
- {{ "contactUs" | translate }}
+ {{ "sellYourCar" | translate }}
                        <img class="whatsIcon" src="../../../assets/images/logo/whatsapp.png "  alt="">
 
       </a>
-    </li>
+    </li> -->
   </div>
 </section>
+
+
+
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-title">
+          <h2>من نحن</h2>
+          <p>
+            منصة سيارة vip هي نتاج خبرات فريق عمل متكامل في مجالات الإستثمار والتخطيط وإدارة المشاريع والتسويق والبرمجة لتكون نـواة عمل طموح وخطط مستقبلية تساهم في تعزيز مفهوم التخصصية في عرض منتج أو نوع معين من السيارات الفخمة فقط .. وذلك لخدمة شريحة خاصة ،، لقلّما خصص لهم منصة مناسبة تعنى بعرض مقتنياتهم المميزة من السيارات الفارهه ، ولإدراكنا بأهمية الموضوع اجتهدنا بايجاد حلول تقنية تقدم خدمات الشراء والبيع ..وكذلك الصيانة وقطع الغيار والاستشارات الفنية التي تهم الملاّك .. ولهذا تم بفضل الله إطلاق منصة سيارة vip .. بحلول مبتكره لتلبية رغباتهم بكل يسر وسهوله .
+ آخذين في الاعتبار تعزيز الشراكة الاستراتيجية مع عملاءنا الكرام لتحقيق أهداف مشتركة .
+ مع وافر الإجلال والتقدير ،،،
+فريق العمل
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 <section class="call-to-action section-sm">
   <!-- Container Start -->
@@ -74,18 +93,25 @@
         <div class="content-holder">
           <div class="bg-black bg-opacity-50">
             <!-- Coupon description -->
-            <h2 class="text-info">{{ "sellYourCar" | translate }}</h2>
+            <!-- <h2 class="text-info">{{ "sellYourCar" | translate }}</h2> -->
             <!-- Submii button -->
-            <a href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20" class="btn btn-main " target="blank">
-                {{ "contactUs" | translate }}
-                              <img class="whatsIcon" src="../../../assets/images/logo/whatsapp.png "  alt="">
-
+            <a
+              href="https://wa.me/+966505895264/?text=السلام%20عليكم..%20أريد%20عرض%20سيارتي%20على%20الموقع%20"
+              class="btn btn-main bg-transparent"
+              target="blank"
+            >
+              {{ "contactUs" | translate }}
+              <img
+                class="whatsIcon"
+                src="../../../assets/images/logo/whatsapp.png "
+                alt=""
+              />
             </a>
-            <a href="mailto:abc@example.com?subject=صور سيارتي&body=الصور" class="btn btn-main me-2 mt-md-0 mt-3" >
+            <!-- <a href="mailto:abc@example.com?subject=صور سيارتي&body=الصور" class="btn btn-main me-2 mt-md-0 mt-3" >
                 ارسل الصور
-                            
 
-            </a>
+
+            </a> -->
           </div>
         </div>
       </div>
@@ -93,8 +119,8 @@
   </div>
   <!-- Container End -->
 </section>
- <ngx-spinner>
-<span>
-    <img src="../../../assets/images/loader.gif" alt="">
-</span>
+<ngx-spinner>
+  <span>
+    <img src="../../../assets/images/loader.gif" alt="" />
+  </span>
 </ngx-spinner>

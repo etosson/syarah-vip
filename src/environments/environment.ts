@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  strapiUrl: 'http://161.35.17.239:1337'
+  strapiUrl: 'http://191.96.53.177:1337'
 
 };
 

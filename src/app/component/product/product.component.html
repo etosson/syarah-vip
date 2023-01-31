@@ -15,18 +15,38 @@
               <option value="" (click)="sortAtoZ()">ترتيب من أ الي ى</option>
               <option value="" (click)="sortZtoA()">ترتيب من ى الي أ</option>
             </select>
-
           </div>
-          <div class="col-md-12 col-xl-4 social-media-icons text-left text-lg-left media row me-5">
-            <a class="col-2" href="https://www.twitter.com/albumaticom">
-                <img class=""src="../../../assets/images/logo/103-1037817_13-twitter-icon-vector-logo-images-twitter-logo.png"  width="50" width="50"/></a>
-            <a class="col-2" href="https://www.youtube.com/channel/UCrNNWFH-e3lk3fNw2bT8tyg">
-                <img class="" src="../../../assets/images/logo/youtube.png"  width="50"/></a>
+          <div
+            class="col-md-12 col-xl-4 social-media-icons text-left text-lg-left media row me-5"
+          >
+            <a
+              class="col-2"
+              href="https://twitter.com/syarhvip?t=zlA_Y7bpHAgmmHsp1WurVQ&s=09"
+            >
+              <img
+                class=""
+                src="../../../assets/images/logo/103-1037817_13-twitter-icon-vector-logo-images-twitter-logo.png"
+                width="40"
+            /></a>
+            <a class="col-2" href="mailto: yusrluxurycar@gmail.com">
+              <img
+                class=""
+                src="../../../assets/images/logo/snapchat.png"
+                width="40"
+            /></a>
+            <a class="col-2" href="https://youtube.com/@syarh.vipcom">
+              <img
+                class=""
+                src="../../../assets/images/logo/youtube.png"
+                width="40"
+            /></a>
 
-            <a class="col-2" href="https://www.facebook.com/albumati.hama">
-                <img class="" src="../../../assets/images/logo/facebook.png"  width="50"/></a>
-            <a class="col-2" href="https://www.instagram.com/albumaticom">
-                <img class=""src="../../../assets/images/logo/Instagram_logo_2016.svg.png"  width="50"/></a>
+            <a class="col-2" href="">
+              <img
+                class=""
+                src="../../../assets/images/logo/gmail.png"
+                width="40"
+            /></a>
           </div>
         </div>
       </div>
@@ -36,11 +56,8 @@
     <div class="row">
       <div class="col-lg-3 col-md-2">
         <div class="category-sidebar">
-
-
-
-                  <!-- search  -->
-        <!-- <form class="widget filter" #userForm="ngForm" (ngSubmit)="filterProject()">
+          <!-- search  -->
+          <!-- <form class="widget filter" #userForm="ngForm" (ngSubmit)="filterProject()">
 
             <h4 class="widget-header">{{ "show" | translate }}</h4>
             <div class="form-group btn-group w-100 my-2">
@@ -51,7 +68,7 @@
                 </option>
             </select>
             </div>
-            
+
             <div class="form-group btn-group w-100 my-2">
             <select class="form-select bg-black text-primary" aria-label="Default select example" >
                 <option class="text-primary">
@@ -94,14 +111,16 @@
             </button>
           </form> -->
 
-
-
           <div class="brand-logos">
-            <a class="brand-logos--svg" *ngFor="let i of logo" >
-                <img alt="ford-logo" class="svg-size-5x" src="{{ i.path }}" width="60" (click)="filter(i.name)"/></a>
-        </div>
-
-
+            <a class="brand-logos--svg" *ngFor="let i of logo">
+              <img
+                alt="ford-logo"
+                class="svg-size-5x"
+                src="{{ i.path }}"
+                width="60"
+                (click)="filter(i.name)"
+            /></a>
+          </div>
 
           <div class="widget product-shorting"></div>
         </div>
@@ -125,7 +144,6 @@
                         src="{{ car.img1 }}"
                         alt="Card image cap"
                         height="400"
-                        
                     /></a>
                   </div>
                   <div class="card-body">
@@ -152,8 +170,8 @@
   </div>
 </section>
 
- <ngx-spinner>
-<span>
-    <img src="../../../assets/images/loader.gif" alt="">
-</span>
+<ngx-spinner>
+  <span>
+    <img src="../../../assets/images/loader.gif" alt="" />
+  </span>
 </ngx-spinner>
